@@ -3,8 +3,8 @@
 ## Workflow:
 1. create a mesh generator file (.geo file) and generate .msh using gmsh gui
 2. convert .msh to .xml using dolfin-convert
-3. .xml is the input to the python file based on finite element platform fenics -- run using batch file
-4. output files: .txt and xdmf -- visualised in paraview and occasionally in spreadsheet
+3. .xml is the input to the python file based on finite element platform fenics -- run using batch file on compute node
+4. output files: .txt and xdmf -- visualised in paraview and occasionally in spreadsheet, .oe -- console output, .out
 
 ## References:
 Aditya Kumar, Blaise Bourdin, Gilles A. Francfort, Oscar Lopez-Pamies,
