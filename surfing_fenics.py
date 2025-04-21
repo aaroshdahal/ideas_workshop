@@ -216,7 +216,7 @@ Wv=pen/2*((abs(z)-z)**2 + (abs(1-z) - (1-z))**2 )*dx
 Wv2=conditional(le(z, 0.05), 1, 0)*40*pen/2*( 1/4*( abs(z_prev-z)-(z_prev-z) )**2 )*dx
 
 if phase_model==1:
-	R_z = y*2*z*(psi11)*dx - y*(ce)*dx +3*delta*Gc/8*(y*(-1)/eps + 2*eps*inner(grad(z),grad(y)))*dx + derivative(Wv,z,y) #+  derivative(Wv2,z,y)  #linear model
+	R_z = y*2*z*(psi11)*dx - y*(ce)*dx +3*delta*Gc/8*(y*(-1)/eps + 2*eps*inner(grad(z),grad(y)))*dx + derivative(Wv,z,y) +  derivative(Wv2,z,y)  #linear model
 else:
 	R_z = y*2*z*(psi11)*dx+ y*(ce)*dx+ Gc*(y*(z-1)/eps + eps*inner(grad(z),grad(y)))*dx + derivative(Wv2,z,y)  #quadratic model
 	
